@@ -1,0 +1,12 @@
+<div class="stores">
+  <ul>
+    <% @stores.each do |store| %>
+      <li>
+        Name: <%= store.long_name %>
+        City: <%= store.city %>
+        Distance: <%= store.distance %>
+        Phone Number: <%= store.phone_number %>
+        Store Type: <%= store.store_type %>
+    <% end %>
+      </li>
+</div>
