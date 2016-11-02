@@ -28,14 +28,13 @@ describe "Items API" do
 
     assert_response :success
     expect(response).to be_success
-    expect(item.id).to eq(item_params[:id])
     expect(item.name).to eq(item_params[:name])
     expect(item.description).to eq(item_params[:description])
     expect(item.image_url).to eq(item_params[:image_url])
   end
 
   it "can delete an item" do
-    item = Item.first
+    item = Item.create(name: "widget", description: "cool thing", image_url: "widget.jpg")
 
     delete "/api/v1/items/#{item.id}"
 
