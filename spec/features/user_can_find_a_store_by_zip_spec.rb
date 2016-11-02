@@ -3,7 +3,6 @@ require 'rails_helper'
 describe "user can find stores by zip code" do
   it "can search stores by zip code" do
     visit '/'
-    save_and_open_page
 
     fill_in "Find Stores by Zip Code", with: 80202
     click_on "Search"

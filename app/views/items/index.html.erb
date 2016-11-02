@@ -1,10 +1,10 @@
-<div>
-  <% form_tag(search_path, :method => "get") do %>
-  <%= label_tag(:q, "Find Stores by Zip Code") %>
-  <%= text_field_tag(:q) %>
+
+<%= form_tag(search_path, :method => "get") do %>
+  <%= label_tag(:zip_code, "Find Stores by Zip Code") %>
+  <%= text_field_tag(:zip_code) %>
   <%= submit_tag("Search") %>
 <% end %>
-</div>
+
 
 <div class="container">
   <div class="row">
