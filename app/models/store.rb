@@ -1,6 +1,7 @@
 class Store
   def initialize(raw_store_params)
     @data = raw_store_params
+    byebug
   end
 
   def long_name
