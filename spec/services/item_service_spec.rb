@@ -1,10 +1,10 @@
 # require 'rails_helper'
 #
-# describe "Item API Service" do
-#   it "finds items for a cateogry" do
-#     VCR.use_cassette("search_by_category") do
+# describe "Best Buy API Service" do
+#   it "finds stores for a zip code" do
+#     VCR.use_cassette("search_by_zip_code") do
 #
-#       item = ItemService.by_category
+#       store = BestBuyService.find_by_zip_code(zip_code)
 #
 #
 #

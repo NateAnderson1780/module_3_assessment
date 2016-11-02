@@ -4,28 +4,27 @@ class Store
     byebug
   end
 
-  def long_name
-
+  def name
+    data[:longName]
   end
 
   def city
-
+    data[:city]
   end
 
   def distance
-
+    data[:distance]
   end
 
   def phone_number
-
+    data[:phone]
   end
 
   def store_type
-
+    data[:storeType]
   end
 
   def self.by_zip_code(zip_code)
-    byebug
     BestBuyService.find_by_zip_code(zip_code).map do |raw_store|
       Store.new(raw_store)
     end
