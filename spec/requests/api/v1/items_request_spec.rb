@@ -32,4 +32,12 @@ describe "Items API" do
     expect(item.name).to eq(item_params[:name])
   end
 
+  it "can delete an item" do
+    item = Item.first
+
+    delete "/api/v1/items/#{item.id}"
+
+    expect{delete "/api/v1/items/#{item.id}"}.to change(Item, :count).by(-1)
+  end
+
 end
