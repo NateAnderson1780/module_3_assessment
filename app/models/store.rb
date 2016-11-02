@@ -24,6 +24,7 @@ class Store
   end
 
   def self.by_zip_code(zip_code)
+    byebug
     BestBuyService.find_by_zip_code(zip_code).map do |raw_store|
       Store.new(raw_store)
     end

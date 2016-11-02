@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "user can find stores by zip code" do
   it "can search stores by zip code" do
-    VCR.use_cassette("stores_by_zip_code") do
+    VCR.use_cassette("stores_by_zip") do
       visit '/'
 
       fill_in "Find Stores by Zip Code", with: 80202
