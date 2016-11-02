@@ -12,7 +12,7 @@ describe "user can find stores by zip code" do
 
       expect(page).to have_content('17 total stores')
 
-      15.times do |i|
+      15.times do
         within(".stores") do
           expect(page).to have_content('Name:')
           expect(page).to have_content('City:')
